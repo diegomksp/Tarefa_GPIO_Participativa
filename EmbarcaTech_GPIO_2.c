@@ -13,6 +13,7 @@ void initialize_gpio();
 void control_components(char command);
 void buzzer_beep();
 void menu();
+void leds();
 
 // Função principal
 int main()
@@ -76,8 +77,12 @@ void control_components(char command)
         printf("Luz vermelha acesa!\n");
         break;
     case '4':
+        printf("Todas as luzes acesas!\n");
+        leds(true);
         break;
     case '5':
+        printf("Todas as luzes apagadas!\n");
+        leds(false);
         break;
     case '6':
         // Comando para o buzzer fazer barulho
@@ -107,7 +112,12 @@ void buzzer_beep()
         sleep_us(50);
     }
 } // Fim buzzer_beep
-
+void leds(int a){
+    gpio_put(LED_RED_PIN, a);
+    gpio_put(LED_GREEN_PIN, a);
+    gpio_put(LED_BLUE_PIN, a);
+    gpio_put(BUZZER_PIN, false);
+}
 void menu(){
     printf("Entre com a opcao desejada: \n");
     printf("[1] Liga LED verde;\n");
