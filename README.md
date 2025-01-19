@@ -32,6 +32,10 @@ O projeto consiste em utilizar a comunicação UART para enviar comandos realiza
 2. Após a gravação, reinicie a placa.
 3. Utilizando um monitor seral, pressione uma tecla para iniciar a execução do programa.
 
+## Ensaio de utilização
+
+https://drive.google.com/file/d/16ol6oJZxhhQUs4YhbVh69yeXXyAWatvV/view?usp=sharing
+
 ## Hardware necessário
 
 - Raspberry Pi Pico
