@@ -4,7 +4,7 @@
 #include "pico/bootrom.h"
 
 #define LED_RED_PIN 13   // Pino para o led vermelho
-#define LED_GREEN_PIN 11 // Ino para o led verde
+#define LED_GREEN_PIN 11 // Pino para o led verde
 #define LED_BLUE_PIN 12  // Pino para o led azul
 #define BUZZER_PIN 21    // Pino para o buzzer
 
@@ -32,7 +32,7 @@ int main()
 
         if (scanf("%c", &command))
         {
-            control_components(command); // Faz a palaca executar uma açao
+            control_components(command); // Faz a placa executar uma açao
         }
     }
     return 0;
@@ -68,8 +68,12 @@ void control_components(char command)
         printf("Luz verde acesa!\n");
         break;
     case '2':
+        gpio_put(LED_BLUE_PIN,1);
+        printf("Luz azul acesa!\n");
         break;
-    case '3':
+    case '3': 
+        gpio_put(LED_RED_PIN,1);
+        printf("Luz vermelha acesa!\n");
         break;
     case '4':
         break;
