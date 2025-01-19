@@ -77,12 +77,12 @@ void control_components(char command)
         printf("Luz vermelha acesa!\n");
         break;
     case '4':
-        leds(true);
         printf("Todas as luzes acesas!\n");
+        leds(true);
         break;
     case '5':
-        leds(false);
         printf("Todas as luzes apagadas!\n");
+        leds(false);
         break;
     case '6':
         // Comando para o buzzer fazer barulho
