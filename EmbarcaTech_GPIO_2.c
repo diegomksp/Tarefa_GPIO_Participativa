@@ -99,7 +99,7 @@ void buzzer_beep()
 {
     int contB;
 
-    for (contB = 0; contB < 10000; contB++)
+    for (contB = 0; contB < 20000; contB++)
     {
         gpio_put(BUZZER_PIN, 1);
         sleep_us(50);
